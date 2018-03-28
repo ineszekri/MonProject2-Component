@@ -1,0 +1,39 @@
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Panel title</h3>
+  </div>
+
+
+  <button type="button" class="btn btn-lg btn-default">hello</button>
+
+  <div class="panel-body">
+
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Nom</th>
+          <th>prixUnitaire</th>
+          <th>imageUrl</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let prod of data'>
+          <td>{{prod.code}}</td>
+          <td>{{prod.nom}}</td>
+          <td>{{prod.prixUnitaire}}</td>
+          <td><img [src] = 'prod.imageurl' ></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+<ul><li *ngFor = "let p of data">{{p.code}}___ {{p.nom}} ___{{p.prixUnitaire}}</li></ul>
+
+
+
+
+

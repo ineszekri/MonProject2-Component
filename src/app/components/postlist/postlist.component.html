@@ -1,0 +1,28 @@
+<h1>List des posts from REST</h1>
+<ul><li *ngFor='let p of data |slice:0:10 '>
+
+{{p.id}}--{{p.title}}--{{p.userId}}
+
+
+</li></ul>
+
+
+
+
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>User id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let p of data |slice:0:10'>
+      <td>{{p.id}}</td>
+      <td>{{p.title}}</td>
+      <td>{{p.userId}}</td>
+    </tr>
+  </tbody>
+</table>
