@@ -11,18 +11,13 @@ import { PostlistComponent } from './components/postlist/postlist.component';
 import {HttpModule } from '@angular/http';
 import { PostService } from './services/post.service';
 import { HttpClientModule } from '@angular/common/http';
-import {RouterModule} from '@angular/router';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { AppRoutingModule } from './routing/app.routingmodule';
 
 
 
-const routes = [
-{ path : '' , component: WelcomeComponent},
-{ path : 'list', component: ProductlistComponent},
-{ path : 'ajout', component: ProductlistComponent},
-{ path : '**', component: NotFoundComponent}
-];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +28,7 @@ const routes = [
   ],
   imports: [
     BrowserModule, /*HttpModule*/HttpClientModule,
-    RouterModule.forRoot(routes),
+    /*RouterModule.forRoot(routes),*/AppRoutingModule
   ],
   providers: [ProductsService, PostService],
   bootstrap: [AppComponent]
